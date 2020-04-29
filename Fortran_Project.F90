@@ -5,7 +5,7 @@ contains
     logical function IsPrime(n)
         integer :: n, j, counter
         counter = 0
-        do j = 2, n/2
+        do j = 2, FLOOR(n**0.5)
             if (MOD(n,j) == 0) then
                 counter = counter + 1
                 IsPrime = .false.
